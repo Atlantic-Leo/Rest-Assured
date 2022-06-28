@@ -1,0 +1,223 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2022-06-24T07:10:33.441Z",
+        "line": 14,
+        "name": "Verify the functionality of AddPlace API",
+        "description": "",
+        "id": "validating-googlemaps-addplace-and-deleteplace-api-s;verify-the-functionality-of-addplace-api;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 6,
+            "name": "AddPlace Payload with \"Amberville\" \"French\" \"Englad\"",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 28600,
+              "status": "skipped"
+            },
+            "line": 7,
+            "name": "user calls \"AddPlaceAPI\" with \"POST\" http request",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"AddPlaceAPI\"",
+                  "offset": 11
+                },
+                {
+                  "val": "\"POST\"",
+                  "offset": 30
+                }
+              ],
+              "location": "StepDefinition.user_calls_with_http_request(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 20500,
+              "status": "skipped"
+            },
+            "line": 8,
+            "name": "the API call got success with status code 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 42
+                }
+              ],
+              "location": "StepDefinition.the_API_call_got_success_with_status_code(Integer)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 11000,
+              "status": "skipped"
+            },
+            "line": 9,
+            "name": "\"status\" in response body is \"OK\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"status\"",
+                  "offset": 0
+                },
+                {
+                  "val": "\"OK\"",
+                  "offset": 29
+                }
+              ],
+              "location": "StepDefinition.in_response_body_is(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 10000,
+              "status": "skipped"
+            },
+            "line": 10,
+            "name": "verify created placeId to \"Amberville\" using \"\u003cGetPlaceAPI\u003e\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Amberville\"",
+                  "offset": 26
+                },
+                {
+                  "val": "\"\u003cGetPlaceAPI\u003e\"",
+                  "offset": 45
+                }
+              ],
+              "location": "StepDefinition.verify_created_placeId_to_using(String,String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@AddPlace"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-06-24T07:10:33.509Z",
+        "before": [
+          {
+            "result": {
+              "duration": 4820491200,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.beforeScenario()"
+            }
+          }
+        ],
+        "line": 17,
+        "name": "Verify the functionality of DeletePlace API",
+        "description": "",
+        "id": "validating-googlemaps-addplace-and-deleteplace-api-s;verify-the-functionality-of-deleteplace-api",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1417500,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "DeletePlace Payload",
+            "match": {
+              "location": "StepDefinition.deleteplace_Payload()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 356782200,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "user calls \"DeletePlaceAPI\" with \"POST\" http request",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"DeletePlaceAPI\"",
+                  "offset": 11
+                },
+                {
+                  "val": "\"POST\"",
+                  "offset": 33
+                }
+              ],
+              "location": "StepDefinition.user_calls_with_http_request(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 146600,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "the API call got success with status code 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 42
+                }
+              ],
+              "location": "StepDefinition.the_API_call_got_success_with_status_code(Integer)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 11076200,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "\"status\" in response body is \"OK\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"status\"",
+                  "offset": 0
+                },
+                {
+                  "val": "\"OK\"",
+                  "offset": 29
+                }
+              ],
+              "location": "StepDefinition.in_response_body_is(String,String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@DeletePlace"
+          }
+        ]
+      }
+    ],
+    "name": "Validating GoogleMaps AddPlace and DeletePlace API\u0027s",
+    "description": "",
+    "id": "validating-googlemaps-addplace-and-deleteplace-api-s",
+    "keyword": "Feature",
+    "uri": "file:src/test/java/features/Maps.feature",
+    "tags": []
+  }
+]
