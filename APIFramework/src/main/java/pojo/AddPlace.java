@@ -1,25 +1,17 @@
 package pojo;
 
-import java.util.*;
+import java.util.List;
 
 public class AddPlace {
-	
-	private Location location;
+
 	private int accuracy;
 	private String name;
 	private String phone_number;
 	private String address;
-	private List<String> types;
 	private String website;
-	private  String language;
-	
-	
-	public Location getLocation() {
-		return location;
-	}
-	public void setLocation(Location location) {
-		this.location = location;
-	}
+	private String language;
+	private Location location;
+	private List<String> types;
 	public int getAccuracy() {
 		return accuracy;
 	}
@@ -44,12 +36,6 @@ public class AddPlace {
 	public void setAddress(String address) {
 		this.address = address;
 	}
-	public List<String> getTypes() {
-		return types;
-	}
-	public void setTypes(List<String> types) {
-		this.types = types;
-	}
 	public String getWebsite() {
 		return website;
 	}
@@ -62,12 +48,17 @@ public class AddPlace {
 	public void setLanguage(String language) {
 		this.language = language;
 	}
-
-	
-
-	
-	
-
-	
+	public Location getLocation() {
+		return location;
+	}
+	public void setLocation(Location location) {
+		this.location = location;
+	}
+	public List<String> getTypes() {
+		return types;
+	}
+	public void setTypes(List<String> types) {
+		this.types = types;
+	}
 
 }

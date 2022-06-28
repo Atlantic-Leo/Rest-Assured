@@ -1,4 +1,4 @@
-package BDD.APIFramework;
+package bdd.APIFramework;
 
 /**
  * Hello world!
