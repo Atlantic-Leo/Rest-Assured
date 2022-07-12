@@ -1,0 +1,130 @@
+Microsoft Windows [Version 10.0.19043.1766]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\DELL>cdC:\Users\DELL\Desktop\gp
+The filename, directory name, or volume label syntax is incorrect.
+
+C:\Users\DELL>cd C:\Users\DELL\Desktop\gp
+
+C:\Users\DELL\Desktop\gp>git init
+Initialized empty Git repository in C:/Users/DELL/Desktop/gp/.git/
+
+C:\Users\DELL\Desktop\gp>git config --global user.name "Atlantic-Leo"
+
+C:\Users\DELL\Desktop\gp>git config --global user.email "muralidharpatnaik187@gmail.com"
+
+C:\Users\DELL\Desktop\gp>git init
+Reinitialized existing Git repository in C:/Users/DELL/Desktop/gp/.git/
+
+C:\Users\DELL\Desktop\gp>ls
+'ls' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\DELL\Desktop\gp>git branch
+
+C:\Users\DELL\Desktop\gp>git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        hi.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+C:\Users\DELL\Desktop\gp>git add *
+
+C:\Users\DELL\Desktop\gp>git commit -m "git"
+[master (root-commit) c76a202] git
+ 1 file changed, 1 insertion(+)
+ create mode 100644 hi.txt
+
+C:\Users\DELL\Desktop\gp>git checkout -b child
+Switched to a new branch 'child'
+
+C:\Users\DELL\Desktop\gp>git branch
+* child
+  master
+
+C:\Users\DELL\Desktop\gp>git status
+On branch child
+nothing to commit, working tree clean
+
+C:\Users\DELL\Desktop\gp>git checkout master
+Switched to branch 'master'
+
+C:\Users\DELL\Desktop\gp>git status
+On branch master
+nothing to commit, working tree clean
+
+C:\Users\DELL\Desktop\gp>git log
+commit c76a202721036a4b23413b21cf89279864659608 (HEAD -> master, child)
+Author: Atlantic-Leo <muralidharpatnaik187@gmail.com>
+Date:   Tue Jul 12 15:51:24 2022 +0530
+
+    git
+
+C:\Users\DELL\Desktop\gp>git checkout child
+Switched to branch 'child'
+
+C:\Users\DELL\Desktop\gp>git log
+commit c76a202721036a4b23413b21cf89279864659608 (HEAD -> child, master)
+Author: Atlantic-Leo <muralidharpatnaik187@gmail.com>
+Date:   Tue Jul 12 15:51:24 2022 +0530
+
+    git
+
+C:\Users\DELL\Desktop\gp>git branch
+* child
+  master
+
+C:\Users\DELL\Desktop\gp>git add *
+
+C:\Users\DELL\Desktop\gp>git commit "child"
+error: pathspec 'child' did not match any file(s) known to git
+
+C:\Users\DELL\Desktop\gp>git commit -m "child"
+On branch child
+nothing to commit, working tree clean
+
+C:\Users\DELL\Desktop\gp>git status
+On branch child
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   hi.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+C:\Users\DELL\Desktop\gp>git restore hi.txt
+
+C:\Users\DELL\Desktop\gp>git checkout master
+Switched to branch 'master'
+
+C:\Users\DELL\Desktop\gp>git status
+On branch master
+nothing to commit, working tree clean
+
+C:\Users\DELL\Desktop\gp>git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   hi.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+C:\Users\DELL\Desktop\gp>git add *
+
+C:\Users\DELL\Desktop\gp>git commit -m "master"
+[master 2c2ffea] master
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+C:\Users\DELL\Desktop\gp>git checkout child
+Switched to branch 'child'
+
+C:\Users\DELL\Desktop\gp>git checkout master
+Switched to branch 'master'
+
+C:\Users\DELL\Desktop\gp>the separate branches are maintained separately in local repository also
